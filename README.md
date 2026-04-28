@@ -1,5 +1,9 @@
 # Sigil
 
+[![PyPI](https://img.shields.io/pypi/v/sigil-ta.svg)](https://pypi.org/project/sigil-ta/)
+[![Python](https://img.shields.io/pypi/pyversions/sigil-ta.svg)](https://pypi.org/project/sigil-ta/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 **MCP-native technical analysis runtime — 8 core indicators, 2 composite signals, and the unique Polymarket Sentiment Divergence (PSD).**
 
 ```bash
