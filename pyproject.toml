@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigil"
+version = "0.1.0"
+description = "MCP-native technical analysis runtime — 8 core indicators, 2 composite signals, and the unique Polymarket Sentiment Divergence (PSD)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "LuciferForge", email = "manja316@gmail.com" }
+]
+keywords = ["technical-analysis", "trading", "indicators", "mcp", "polymarket", "rsi", "macd", "bollinger-bands", "supertrend", "backtest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []  # Core is pure stdlib
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0.0"]
+dashboard = ["streamlit>=1.28", "pandas>=1.5", "plotly>=5.15"]
+pandas = ["pandas>=1.5"]
+all = ["mcp>=1.0.0", "streamlit>=1.28", "pandas>=1.5", "plotly>=5.15"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+sigil = "sigil.cli:main"
+sigil-mcp = "sigil.mcp.server:main"
+sigil-dashboard = "sigil.dashboard.app:cli_main"
+
+[project.urls]
+Homepage = "https://github.com/LuciferForge/sigil"
+Repository = "https://github.com/LuciferForge/sigil"
+Issues = "https://github.com/LuciferForge/sigil/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
