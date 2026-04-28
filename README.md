@@ -3,7 +3,7 @@
 **MCP-native technical analysis runtime — 8 core indicators, 2 composite signals, and the unique Polymarket Sentiment Divergence (PSD).**
 
 ```bash
-pip install sigil
+pip install sigil-ta
 sigil demo rsi
 ```
 
@@ -70,7 +70,7 @@ print(result.summary())
 ### MCP server
 
 ```bash
-pip install sigil[mcp]
+pip install sigil-ta[mcp]
 sigil-mcp                # stdio (Claude Desktop / Cursor / Cline)
 sigil-mcp --transport http --port 8765   # HTTP transport
 ```
@@ -95,7 +95,7 @@ Then ask Claude things like:
 ### Streamlit dashboard
 
 ```bash
-pip install sigil[dashboard]
+pip install sigil-ta[dashboard]
 sigil-dashboard
 ```
 
@@ -105,16 +105,16 @@ Pick a symbol, an interval, an indicator. See the candles + indicator + (for com
 
 ```bash
 # Core (pure stdlib, no deps)
-pip install sigil
+pip install sigil-ta
 
 # With MCP server
-pip install sigil[mcp]
+pip install sigil-ta[mcp]
 
 # With Streamlit dashboard
-pip install sigil[dashboard]
+pip install sigil-ta[dashboard]
 
 # Everything
-pip install sigil[all]
+pip install sigil-ta[all]
 ```
 
 ## CLI quickstart

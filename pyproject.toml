@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sigil"
+name = "sigil-ta"
 version = "0.1.0"
 description = "MCP-native technical analysis runtime — 8 core indicators, 2 composite signals, and the unique Polymarket Sentiment Divergence (PSD)."
 readme = "README.md"
